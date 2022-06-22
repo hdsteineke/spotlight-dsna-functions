@@ -36,18 +36,26 @@ function every(arr, predicate) {
   // loop through every item in the array, checking if it meets the predicate condition
   // if any item in the array does not meet the condition, returns 'false'
   // otherwise returns 'true'
-  for(let i = 0; i < arr.length; i++) {
-    const item = arr[i]
+  for (let i = 0; i < arr.length; i++) {
+    const item = arr[i];
     if (!predicate(item)) return false;
   }
   return true;
 }
 
-console.log(every([2, 4, 6], n => n % 2 === 0));
-console.log(every([1, 2, 3], n => n % 2 === 0));
+// console.log(every([2, 4, 6], n => n % 2 === 0));
+// console.log(every([1, 2, 3], n => n % 2 === 0));
 
 
-
+/// some method ///
+function some(arr, predicate) {
+  for (let i = 0; i < arr.length; i++) {
+    if (predicate(arr[i])) return true;
+  }
+  return false;
+}
+console.log(some([1, 6, 5], n => n % 2 === 0));
+console.log(some([1, 7, 3], n => n % 2 === 0));
 
 
 /// add-punctuation
