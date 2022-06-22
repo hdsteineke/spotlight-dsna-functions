@@ -20,6 +20,16 @@ Write a function `every` that takes an array and a predicate callback function, 
 
 ```js
 function every(arr, predicate) {
+  // loop through every item in the array, checking if it meets the predicate condition
+  // if any item in the array does not meet the condition, returns 'false'
+  // otherwise returns 'true'
+ for(let i = 0; i < arr.length; i++) {
+  const item = arr[i]
+  if (predicate(item))
+ }
+}
+
+
 ```
 
 > **You can assume valid inputs**

@@ -12,8 +12,10 @@ function map(arr, callback) {
 const myArray = [1, 6, 5];
 const newArray = map(myArray, (num) => num ** 2);
 
-console.log(newArray, 'newArray');
+//console.log(newArray, 'newArray');
 
+
+/// filter 
 function filter(arr, predicate) {
   const newArray = [];
   for (let i = 0; i < arr.length; i++) {
@@ -25,4 +27,29 @@ function filter(arr, predicate) {
 
 const newArrayFilter = filter([2, 6, 5], n => n % 2 === 0);
 
-console.log('newArrayFilter', newArrayFilter);
+//console.log('newArrayFilter', newArrayFilter);
+
+
+//// every method ////
+
+
+
+/// add-punctuation
+
+function addPunctuation(punct) {
+  return (x) => {
+    return x + punct;
+  }
+}
+
+const addExcitement = addPunctuation('!!!');
+console.log(addExcitement('Hello World'));
+
+console.log(addExcitement('Pokemon, catch em all'));
+// Pokemon, catch em all!!!
+
+const addUnsure = addPunctuation('?!?');
+console.log(addUnsure('Hello World'));
+// Hello World?!?
+console.log(addUnsure('Pokemon, catch em all'));
+// Pokemon, catch em all?!?
