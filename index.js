@@ -95,3 +95,21 @@ const addCat = addFirst('cat');
 // [cat,dog,bird,lizard]
 //console.log(addCat(['lizard', 'donkey', 'whale']));
 // [cat,lizard,donkey,whale]
+
+
+//////////// FIBONACCI 
+
+function fib(n) {
+  //0 1 1 2 3 5 8 13 21
+  // fib(5) should return fib(3) + fib(4) => 2 + 3 => 5
+  if (n === 0) return 0;
+  if (n === 1) return 1;
+  return fib(n-1) + fib(n-2);
+}
+
+
+console.log(fib(0));  // 0
+console.log(fib(1));  // 0, 1
+console.log(fib(2));  // 0, 1, 1
+console.log(fib(6)); // 0, 1, 1, 2, 3, 5, 8
+console.log(fib(8));  // 0, 1, 1, 2, 3, 5, 8, 13, 21
