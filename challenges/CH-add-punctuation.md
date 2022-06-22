@@ -10,9 +10,21 @@ Write a function `addPunctuation` that takes a string of `punctuation` and retur
 ## Test Cases
 
 ```js
+function addPunctuation(punct) {
+  return (x) => {
+    return x + punct;
+  }
+}
+
+
 const addExcitement = addPunctuation('!!!');
 console.log(addExcitement('Hello World'));
 // Hello World!!!
+
+
+
+
+
 console.log(addExcitement('Pokemon, catch em all'));
 // Pokemon, catch em all!!!
 
