@@ -10,6 +10,11 @@ Write a function `addFirst` that takes a parameter `element` and returns a funct
 ## Test Cases
 
 ```js
+function addFirst(el){
+  return (arr) => {
+    return arr.unshift(el);
+  }
+}
 const addOrange = addFirst('orange');
 console.log(addOrange(['red', 'blue', 'green']));
 // [orange,red,blue,green]

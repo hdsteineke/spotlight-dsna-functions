@@ -39,17 +39,35 @@ const newArrayFilter = filter([2, 6, 5], n => n % 2 === 0);
 function addPunctuation(punct) {
   return (x) => {
     return x + punct;
-  }
+  };
 }
 
 const addExcitement = addPunctuation('!!!');
-console.log(addExcitement('Hello World'));
+// console.log(addExcitement('Hello World'));
 
-console.log(addExcitement('Pokemon, catch em all'));
+// console.log(addExcitement('Pokemon, catch em all'));
 // Pokemon, catch em all!!!
 
 const addUnsure = addPunctuation('?!?');
-console.log(addUnsure('Hello World'));
+// console.log(addUnsure('Hello World'));
 // Hello World?!?
-console.log(addUnsure('Pokemon, catch em all'));
+// console.log(addUnsure('Pokemon, catch em all'));
 // Pokemon, catch em all?!?
+
+function addFirst(el) {
+  return (arr) => {
+    const newArr = [el, ...arr];
+    return newArr;
+  };
+}
+const addOrange = addFirst('orange');
+console.log(addOrange(['red', 'blue', 'green']));
+// [orange,red,blue,green]
+console.log(addOrange(['blue', 'blue', 'blue']));
+// [orange,blue,blue,blue]
+
+const addCat = addFirst('cat');
+console.log(addCat(['dog', 'bird', 'lizard']));
+// [cat,dog,bird,lizard]
+console.log(addCat(['lizard', 'donkey', 'whale']));
+// [cat,lizard,donkey,whale]
